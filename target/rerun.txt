@@ -1,0 +1,1 @@
+file:src/test/resources/io/duotech/features/product_info.feature:12:54

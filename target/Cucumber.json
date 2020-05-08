@@ -1,0 +1,125 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-08T20:38:50.170Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.duotech.step_definitions.Hooks.setUpSmoke()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2924000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.duotech.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Verufy product name",
+        "description": "     As a user, I want to be able to login  # Description of the scenario ",
+        "id": "product-description;verufy-product-name",
+        "after": [
+          {
+            "result": {
+              "duration": 638000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.duotech.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3440000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I am on a homepage",
+            "match": {
+              "location": "io.duotech.step_definitions.LoginStepDefs.i_am_on_a_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1508000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I click on \"Blouse\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Blouse\"",
+                  "offset": 11
+                }
+              ],
+              "location": "io.duotech.step_definitions.ProductInfoStepDefs.i_click_on(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 458000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The product page should also display \"Blouse\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Blouse\"",
+                  "offset": 37
+                }
+              ],
+              "location": "io.duotech.step_definitions.ProductInfoStepDefs.the_product_page_should_also_display(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 44000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The product price should be 27.0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "27.0",
+                  "offset": 28
+                }
+              ],
+              "location": "io.duotech.step_definitions.ProductInfoStepDefs.the_product_price_should_be(java.lang.Double)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Product description",
+    "description": "",
+    "id": "product-description",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/io/duotech/features/product_info/product_info.feature",
+    "tags": []
+  }
+]

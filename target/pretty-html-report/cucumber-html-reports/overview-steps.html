@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Ecommerce Project</td>
+        <td>1</td>
+      <td>01 May 2020, 12:50</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">io.duotech.step_definitions.Hooks.setUp()</td>
+              <td>14</td>
+              <td class="duration" data-value="2314000000">2.314</td>
+              <td class="duration" data-value="2314000000">3.355</td>
+              <td class="duration" data-value="32396000000">32.396</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.Hooks.setUpDB()</td>
+              <td>14</td>
+              <td class="duration" data-value="653214285">0.653</td>
+              <td class="duration" data-value="653214285">1.882</td>
+              <td class="duration" data-value="9145000000">9.145</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>14</td>
+              <td class="duration" data-value="1130142857">1.130</td>
+              <td class="duration" data-value="1130142857">1.645</td>
+              <td class="duration" data-value="15822000000">15.822</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.LoginStepDefs.i_am_on_a_homepage()</td>
+              <td>14</td>
+              <td class="duration" data-value="4549500000">4.549</td>
+              <td class="duration" data-value="4549500000">9.578</td>
+              <td class="duration" data-value="63693000000">1:3.693</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.LoginStepDefs.i_click_on_Sign_in()</td>
+              <td>14</td>
+              <td class="duration" data-value="1243714285">1.243</td>
+              <td class="duration" data-value="1243714285">2.176</td>
+              <td class="duration" data-value="17412000000">17.412</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.LoginStepDefs.i_enter_as_email_as_rassword_and_click_login(java.lang.String,java.lang.String)</td>
+              <td>14</td>
+              <td class="duration" data-value="2014928571">2.014</td>
+              <td class="duration" data-value="2014928571">3.573</td>
+              <td class="duration" data-value="28209000000">28.209</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.VerifyUserInfoFromDatabaseStepDefs.i_click_on_My_Address_book()</td>
+              <td>14</td>
+              <td class="duration" data-value="955571428">0.955</td>
+              <td class="duration" data-value="955571428">1.265</td>
+              <td class="duration" data-value="13378000000">13.378</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">io.duotech.step_definitions.VerifyUserInfoFromDatabaseStepDefs.user_info_related_to_the_email_should_match_the_info_in_the_database(java.lang.String)</td>
+              <td>14</td>
+              <td class="duration" data-value="340000000">0.340</td>
+              <td class="duration" data-value="340000000">0.453</td>
+              <td class="duration" data-value="4760000000">4.760</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>8</td>
+            <td>112</td>
+            <td class="duration">1.650</td>
+            <td class="duration">1:3.693</td>
+            <td class="duration">3:4.815</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
