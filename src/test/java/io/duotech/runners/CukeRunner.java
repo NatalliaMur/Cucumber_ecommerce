@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions (
 				  plugin = { // "pretty",
 						  "html:target/built-in-html-report",  //Where generats my html report
-						  "json:target/Cucumber.json" // We are generats more nice and verbose report
+						  "json:target/Cucumber.json", // We are generats more nice and verbose report
 						  "junit:target/Cucumber.xml"	  
 				  },	
 				  tags = "@smoke", //"@test1 and @smoke", //"@test1 or @smoke",
