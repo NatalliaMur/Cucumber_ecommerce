@@ -39,7 +39,7 @@ public class LoginStepDefs {
 				.implicitlyWait(Long.parseLong(ConfigReader.getConfiguration("implicitTimeout")), TimeUnit.SECONDS);
 		Driver.getDriver().get(ConfigReader.getConfiguration("url"));
 		logger.info("Navigating to a homepage");
-
+		System.out.println("First connect with remote server");
 	}
 
 	@When("I click on Sign in")
