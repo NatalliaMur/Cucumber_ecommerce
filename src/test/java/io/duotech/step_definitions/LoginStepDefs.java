@@ -40,6 +40,7 @@ public class LoginStepDefs {
 		Driver.getDriver().get(ConfigReader.getConfiguration("url"));
 		logger.info("Navigating to a homepage");
 		System.out.println("First connect with remote server");
+		System.out.println("First connect failed, second connect with remote server");
 	}
 
 	@When("I click on Sign in")
