@@ -33,7 +33,7 @@ Feature: Product description
    Scenario: Verufy plus and minus button  
        
     Given I am on a homepage
-    When I click on Blouse
+    When I click on Blouse1
     Then I land on product page
     And I click on plus button 10 times
     Then The quantity should be correct
